@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+<head>
+  <meta charset="utf-8">
+  <title>Multiplayer 2048</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/cb_style.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no" />
+
+  <meta property="og:title" content="Multiplayer 2048"/>
+  <meta property="og:site_name" content="Multiplayer 2048"/>
+  <meta property="og:description" content="Join the numbers and get to the 10 tile! Careful: this game is extremely addictive!"/>
+  <meta property="og:image" content=""/>
+  
+</head>
+<body onload="hideShow('hide')">
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">Multiplayer 2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+        <div class="turn-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button" id="rb">Restart</a>
+      <div class="rewind-container">
+      <a class="rewind-button" id="rwb">Undo 1</a>
+      </div>
+    </div>
+    
+    <div class="above-game">
+      <p class="player1Text" id="p1"><strong>Player 1</strong></p>
+      <p class="player2Text" id="p2"><strong>Player 2</strong></p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+          <a class="yes-button">Yes</a>
+          <a class="no-button">No</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Player 1 uses the <strong>WASD</strong> keys to move the tiles while Player 2 uses the <strong>arrow</strong> keys. When two tiles with the same number touch, they <strong>merge into one!</strong> Players switch off turns moving the tiles.
+    </p><!--
+    <hr>
+    <p>
+    Based on 2048 by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> which is based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+    <br>-->
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  
+</body>
+</html>
